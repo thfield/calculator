@@ -10,140 +10,79 @@
 </head>
 
 <body>
-    <div class="small-12 columns">
-        <h1>This is an unintelligent four function calculator</h1>
-    </div>
-    <div class="calculator small-8 columns">
-        <div class="row group" id="displays">
+    <div>
+        <div class="small-12 columns">
+            <h1>This is a simple RPN four function calculator</h1>
+        </div>
+        <div class="calculator small-8 columns">
+            <div class="row group" id="displays">
+                <div class="row">
+                    <div class="panel small-6 columns" id="line3"></div>
+                </div>
+                <div class="row">
+                    <div class="panel small-6 columns" id="line2"></div>
+                </div>
+                <div class="row">
+                    <div class="panel small-6 columns" id="line1"></div>
+                </div>
+                <div class="row">
+                    <div class="panel small-6 columns" id="line0"></div>
+                </div>
+                <div class="row">
+                    <div class="panel small-4 columns" id="lineA"></div>
+                </div>
+            </div>
+
+            <div class="row group" id="memories">
+                <span class="small radius button mem" id="m1">m1</span>
+                <span class="small radius button mem" id="m2">m2</span>
+                <span class="small radius button mem" id="m3">m3</span>
+                <span class="small radius button mem" id="m4">m4</span>
+            </div>
+
+            <div class="row group" id="bookkeeping">
+                <span class="small radius button" id="posneg">±</span>
+                <span class="small radius button fn" id="clear">C</span>
+                <span class="small radius button fn" id="bksp">&larr;</span>
+            </div>
+
             <div class="row">
-                <div class="panel small-3 columns" id="zone2"></div>
-            </div>
-            <div class="row">
-                <div class="panel small-1 columns" id="zone3"></div>
-            </div>
-            <div class="row">
-                <div class="panel small-6 columns" id="zone1"></div>
+
+                <div class="small-4 columns group" id="numberpad">
+                    <div class="row">
+                        <span class="small round button number" id="seven" data-val="7">7</span>
+                        <span class="small round button number" id="eight" data-val="8">8</span>
+                        <span class="small round button number" id="nine" data-val="9">9</span>
+                    </div>
+                    <div class="row">
+                        <span class="small round button number" id="four" data-val="4">4</span>
+                        <span class="small round button number" id="five" data-val="5">5</span>
+                        <span class="small round button number" id="six" data-val="6">6</span>
+                    </div>
+                    <div class="row">
+                        <span class="small round button number" id="one" data-val="1">1</span>
+                        <span class="small round button number" id="two" data-val="2">2</span>
+                        <span class="small round button number" id="three" data-val="3">3</span>
+                    </div>
+                    <div class="row">
+                        <span class="small round button number" id="decimal" data-val=".">.</span>
+                        <span class="small round button number" id="zero" data-val="0">0</span>
+                    </div>
+                </div>
+
+                <div class="small-2 columns group" id="operatorpad">
+                    <span class="small radius button operator" id="add">+</span>
+                    <span class="small radius button operator" id="subtract">-</span>
+                    <span class="small radius button operator" id="multiply">×</span>
+                    <span class="small radius button operator" id="divide">÷</span>
+                    <span class="small radius button " id="enter">↵</span>
+                </div>
+
+                <div class="small-1 column"></div>
             </div>
         </div>
-
-
-        <div class="row group" id="memories">
-            <span class="small radius button mem" id="m1">m1</span>
-            <span class="small radius button mem" id="m2">m2</span>
-            <span class="small radius button mem" id="m3">m3</span>
-            <span class="small radius button mem" id="m4">m4</span>
-        </div>
-
-        <div class="row group" id="bookkeeping">
-            <span class="small radius button fn" id="memadd">M+</span>
-            <span class="small radius button fn" id="memsub">M-</span>
-            <span class="small radius button fn" id="clear">C</span>
-            <span class="small radius button fn" id="bksp">&larr;</span>
-        </div>
-        
-        <div class="row">
-            <div class="small-4 columns group" id="numberpad">
-                <div class="row">
-                    <span class="small round button number" id="seven" data-val="7">7</span>
-                    <span class="small round button number" id="eight" data-val="8">8</span>
-                    <span class="small round button number" id="nine" data-val="9">9</span>
-                </div>
-                <div class="row">
-                    <span class="small round button number" id="four" data-val="4">4</span>
-                    <span class="small round button number" id="five" data-val="5">5</span>
-                    <span class="small round button number" id="six" data-val="6">6</span>
-                </div>
-                <div class="row">
-                    <span class="small round button number" id="one" data-val="1">1</span>
-                    <span class="small round button number" id="two" data-val="2">2</span>
-                    <span class="small round button number" id="three" data-val="3">3</span>
-                </div>
-                <div class="row">
-                    <span class="small round button number" id="decimal" data-val=".">.</span>
-                    <span class="small round button number" id="zero" data-val="0">0</span>
-                </div>
-            </div>
-
-            <div class="small-2 columns group" id="operatorpad">
-                <span class="small radius button operator" id="add">+</span>
-                <span class="small radius button operator" id="subtract">-</span>
-                <span class="small radius button operator" id="multiply">&times;</span>
-                <span class="small radius button operator" id="divide">&divide;</span>
-                <span class="small radius button " id="equals">=</span>
-                <span class="small radius button " id="posneg">&plusmn;</span>
-            </div>
-            
-        </div>
-
-
+        <div id='testing'></div>
     </div>
-
-    <hr />
-    <!-- Grid Example -->
-    <div class="gridexample">
-        <div class="row">
-            <div class="large-12 columns">
-                <div class="callout panel">
-                    <p>
-                        <strong>This is a twelve column section in a row.</strong>Each of these includes a div.panel element so you can see where the columns are - it's not required at all for the grid.</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="large-6 medium-6 columns">
-                <div class="callout panel">
-                    <p>Six columns</p>
-                </div>
-            </div>
-            <div class="large-6 medium-6 columns">
-                <div class="callout panel">
-                    <p>Six columns</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="large-4 medium-4 small-4 columns">
-                <div class="callout panel">
-                    <p>Four columns1</p>
-                </div>
-            </div>
-            <div class="large-4 medium-4 small-4 columns">
-                <div class="callout panel">
-                    <p>Four columns2</p>
-                </div>
-            </div>
-            <div class="large-4 medium-4 small-4 columns">
-                <div class="callout panel">
-                    <p>Four columns3</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Grid Example -->
-
-    <!-- Button Example -->
-    <div class="buttonexample">
-        <div class="row">
-            <div class="large-4 medium-4 columns">
-                <h5>Try one of these buttons:</h5>
-                <p>
-                    <span class="small button">Simple Button</span>
-                    <br/>
-                    <a href="#" class="small radius button">Radius Button</a>
-                    <br/>
-                    <a href="#" class="small round button">Round Button</a>
-                    <br/>
-                    <a href="#" class="medium success button">Success Btn</a>
-                    <br/>
-                    <a href="#" class="medium alert button">Alert Btn</a>
-                    <br/>
-                    <a href="#" class="medium secondary button">Secondary Btn</a>
-                </p>
-            </div>
-        </div>
-    </div>
-    <!-- End Button Example -->
-
     <script src="bower_components/jquery/jquery.js"></script>
     <script src="bower_components/foundation/js/foundation.min.js"></script>
     <script src="js/app.js"></script>
