@@ -10,14 +10,20 @@
 </head>
 
 <body>
-    <div class="large-12 columns">
-        <h1>This is a four function calculator</h1>
+    <div class="small-12 columns">
+        <h1>This is an unintelligent four function calculator</h1>
     </div>
-    <div class="row">
+    <div class="calculator small-8 columns">
         <div class="row group" id="displays">
-            <div class="panel small-3 columns" id="zone2">zone2</div>
-            <div class="panel small-3 columns" id="zone3"></div>
-            <div class="panel small-6 columns" id="zone1"></div>
+            <div class="row">
+                <div class="panel small-3 columns" id="zone2"></div>
+            </div>
+            <div class="row">
+                <div class="panel small-1 columns" id="zone3"></div>
+            </div>
+            <div class="row">
+                <div class="panel small-6 columns" id="zone1"></div>
+            </div>
         </div>
 
 
@@ -29,12 +35,12 @@
         </div>
 
         <div class="row group" id="bookkeeping">
-
             <span class="small radius button fn" id="memadd">M+</span>
             <span class="small radius button fn" id="memsub">M-</span>
             <span class="small radius button fn" id="clear">C</span>
             <span class="small radius button fn" id="bksp">&larr;</span>
         </div>
+        
         <div class="row">
             <div class="small-4 columns group" id="numberpad">
                 <div class="row">
@@ -66,7 +72,7 @@
                 <span class="small radius button " id="equals">=</span>
                 <span class="small radius button " id="posneg">&plusmn;</span>
             </div>
-            <div class="small-2 columns"></div>
+            
         </div>
 
 
