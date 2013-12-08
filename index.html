@@ -10,30 +10,24 @@
 </head>
 
 <body>
+    <div class="large-12 columns">
+        <h1>This is a four function calculator</h1>
+    </div>
     <div class="row">
-        <div class="large-12 columns">
-            <h1>This is a four function calculator</h1>
+        <div class="row group" id="displays">
+            <div class="panel small-3 columns" id="zone2">zone2</div>
+            <div class="panel small-3 columns" id="zone3"></div>
+            <div class="panel small-6 columns" id="zone1"></div>
         </div>
 
-        <div class="row">
-            <div class="small-6 columns display">
-                <div class="panel" id="zone1">primary</div>
-            </div>
-            <div class="small-2 columns display">
-                <div class="panel" id="zone3">tertiary</div>
-            </div>
-            <div class="small-4 columns display">
-                <div class="panel" id="zone2">secondary</div>
-            </div>
-        </div>
-        
+
         <div class="row group" id="memories">
             <span class="small radius button mem" id="m1">m1</span>
             <span class="small radius button mem" id="m2">m2</span>
             <span class="small radius button mem" id="m3">m3</span>
             <span class="small radius button mem" id="m4">m4</span>
         </div>
-        
+
         <div class="row group" id="bookkeeping">
 
             <span class="small radius button fn" id="memadd">M+</span>
@@ -44,23 +38,23 @@
         <div class="row">
             <div class="small-4 columns group" id="numberpad">
                 <div class="row">
-                    <span class="small round button number" id="seven">7</span>
-                    <span class="small round button number" id="eight">8</span>
-                    <span class="small round button number" id="nine">9</span>
+                    <span class="small round button number" id="seven" data-val="7">7</span>
+                    <span class="small round button number" id="eight" data-val="8">8</span>
+                    <span class="small round button number" id="nine" data-val="9">9</span>
                 </div>
                 <div class="row">
-                    <span class="small round button number" id="four">4</span>
-                    <span class="small round button number" id="five">5</span>
-                    <span class="small round button number" id="six">6</span>
+                    <span class="small round button number" id="four" data-val="4">4</span>
+                    <span class="small round button number" id="five" data-val="5">5</span>
+                    <span class="small round button number" id="six" data-val="6">6</span>
                 </div>
                 <div class="row">
-                    <span class="small round button number" id="one">1</span>
-                    <span class="small round button number" id="two">2</span>
-                    <span class="small round button number" id="three">3</span>
+                    <span class="small round button number" id="one" data-val="1">1</span>
+                    <span class="small round button number" id="two" data-val="2">2</span>
+                    <span class="small round button number" id="three" data-val="3">3</span>
                 </div>
                 <div class="row">
-                    <span class="small round button number" id="decimal">.</span>
-                    <span class="small round button number" id="zero">0</span>
+                    <span class="small round button number" id="decimal" data-val=".">.</span>
+                    <span class="small round button number" id="zero" data-val="0">0</span>
                 </div>
             </div>
 
@@ -69,13 +63,11 @@
                 <span class="small radius button operator" id="subtract">-</span>
                 <span class="small radius button operator" id="multiply">&times;</span>
                 <span class="small radius button operator" id="divide">&divide;</span>
-                <span class="small radius button operator" id="equals">=</span>
-                <span class="small radius button operator" id="posneg">&plusmn;</span>
+                <span class="small radius button " id="equals">=</span>
+                <span class="small radius button " id="posneg">&plusmn;</span>
             </div>
             <div class="small-2 columns"></div>
         </div>
-
-
 
 
     </div>
