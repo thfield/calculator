@@ -27,9 +27,10 @@ $(document).ready(function () {
     // function appends numStr to the active operand string
     function takeIn(numStr) {
         activeString += numStr.toString();
-        displayActiv();
+        displayActive();
     };
-
+    
+    // convert the active string to a number
     function strToNum() {
         if (activeString !== ''){
             activeNum = Number(activeString);
@@ -38,17 +39,17 @@ $(document).ready(function () {
 
     // click on enter button
     $(document).on('click', '#enter', function () {
-        if (activeString === ''){
-            activeNum = stack[0];            
-        } else {
-        strToNum();
+        if (activeString === ''){   // if there is no active input
+            activeNum = stack[0];   // copy the first number from the stack        
+        } else {                    // otherwise
+        strToNum();                 // make the active input part of the stack
         }
         stack.unshift(activeNum);
         displayStack();
         clearActive();
     });
 
-    function displayActiv() {
+    function displayActive() {
         a.text(activeString);
     };
 
@@ -67,15 +68,15 @@ $(document).ready(function () {
         } else {
             last = activeString.length - 1;
             activeString = activeString.substring(0, last);
-            displayActiv();
+            displayActive();
         };
     });
 
-    // clear active
+    // clear active input field
     function clearActive() {
         activeString = '';
         activeNum = undefined;
-        displayActiv();
+        displayActive();
     };
 
     // click clear button
@@ -85,7 +86,8 @@ $(document).ready(function () {
         clearActive();
     });
 
-    // TODO change y to unshift only if activeNum exists
+    // function for arithmetic with logic
+    // to deal with case of empty active input
     function opPress(opCase) {
         strToNum();
         if (!isNaN(activeNum)) {
