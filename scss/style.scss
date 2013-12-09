@@ -1,0 +1,46 @@
+
+// STTNG Colors
+$STTNG-1:#9999cc;
+$STTNG-2:#9999ff;
+$STTNG-3:#cc99cc;
+$STTNG-4:#cc6699;
+$STTNG-5:#cc6666;
+$STTNG-6:#ff9966;
+$STTNG-7:#ff9900;
+$STTNG-8:#ffcc66;
+
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+
+body {
+    background-color:#6c6c6c;
+    font-family: "Oswald", sans-serif;
+}
+
+#posneg {
+    display: none;
+}
+
+.number {
+    background-color:$STTNG-1;
+}
+
+.display {
+    background-color: $STTNG-3;
+    color: black;
+    padding: 1em;
+}
+
+.fn {
+    background-color: $STTNG-8;
+}
+
+.operator{
+    background-color:$STTNG-5;
+}
+
+li:not(.display) {
+    cursor: pointer;
+    list-style: none;
+    display: inline-block;
+    padding: 1em;
+}

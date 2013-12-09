@@ -1,7 +1,3 @@
-// Foundation JavaScript
-// Documentation can be found at: http://foundation.zurb.com/docs
-$(document).foundation();
-
 $(document).ready(function () {
     var activeString = '';
     var activeNum;
@@ -15,7 +11,7 @@ $(document).ready(function () {
         $('#testing').text(str);
     };
     $(document).on('click', '#posneg', function () {
-        testOutput('str:' + activeString + ' num:' + activeNum + ' s:' + stack[0] + ' ' + stack [1] + ' ' + stack[2] + ' ' + stack[3]);
+        testOutput('str:' + activeString + ' num:' + activeNum + ' s:' + stack[0] + ' ' + stack[1] + ' ' + stack[2] + ' ' + stack[3]);
     });
 
     // when number button is clicked, pass data-val to function takeIn()
@@ -29,20 +25,20 @@ $(document).ready(function () {
         activeString += numStr.toString();
         displayActive();
     };
-    
+
     // convert the active string to a number
     function strToNum() {
-        if (activeString !== ''){
+        if (activeString !== '') {
             activeNum = Number(activeString);
         };
     };
 
     // click on enter button
     $(document).on('click', '#enter', function () {
-        if (activeString === ''){   // if there is no active input
-            activeNum = stack[0];   // copy the first number from the stack        
-        } else {                    // otherwise
-        strToNum();                 // make the active input part of the stack
+        if (activeString === '') { // if there is no active input
+            activeNum = stack[0]; // copy the first number from the stack        
+        } else { // otherwise
+            strToNum(); // make the active input part of the stack
         }
         stack.unshift(activeNum);
         displayStack();
@@ -89,33 +85,36 @@ $(document).ready(function () {
     // function for arithmetic with logic
     // to deal with case of empty active input
     function opPress(opCase) {
+        if (typeof stack[0] == 'undefined') {
+            return;
+        };
         strToNum();
         if (!isNaN(activeNum)) {
             stack.unshift(activeNum);
         };
-        if ( typeof stack[1] == 'undefined') {
+        if (typeof stack[1] == 'undefined') {
             return;
-        } else{
-            y = stack.shift();
-            x = stack.shift();
-            switch (opCase) {
-            case "a":
-                answer = x + y;
-                break;
-            case "s":
-                answer = x - y;
-                break;
-            case "m":
-                answer = x * y;
-                break;
-            case "d":
-                answer = x / y;
-                break;
-            }
-            clearActive();
-            stack.unshift(answer);
-            displayStack();
         };
+        y = stack.shift();
+        x = stack.shift();
+        switch (opCase) {
+        case "a":
+            answer = x + y;
+            break;
+        case "s":
+            answer = x - y;
+            break;
+        case "m":
+            answer = x * y;
+            break;
+        case "d":
+            answer = x / y;
+            break;
+        }
+        clearActive();
+        stack.unshift(answer);
+        displayStack();
+
     };
 
     // addition click

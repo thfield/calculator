@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <script src="js/modernizr.js"></script>
+</head>
+
+<body>
+    
+    <ul class="group" id="displaypad">
+        <li class="display" id="line3"></li>
+        <li class="display" id="line2"></li>
+        <li class="display" id="line1"></li>
+        <li class="display" id="line0"></li>
+        <li class="display" id="lineA"></li>
+    </ul>
+
+    <ul class="group" id="fnpad">
+        <li class="fn" id="posneg">±</li>
+        <li class="fn" id="clear">C</li>
+        <li class="fn" id="bksp">←</li>
+        <li class="fn" id="enter">↵</li>
+    </ul>
+
+    <ul class="group" id="numberpad">
+        <li class="number" data-val="9">9</li>
+        <li class="number" data-val="8">8</li>
+        <li class="number" data-val="7">7</li>
+        <li class="number" data-val="6">6</li>
+        <li class="number" data-val="5">5</li>
+        <li class="number" data-val="4">4</li>
+        <li class="number" data-val="3">3</li>
+        <li class="number" data-val="2">2</li>
+        <li class="number" data-val="1">1</li>
+        <li class="number" data-val="0">0</li>
+        <li class="number" data-val=".">.</li>
+    </ul>
+
+    <ul class="group" id="operatorpad">
+        <li class="operator" id="add">+</li>
+        <li class="operator" id="subtract">-</li>
+        <li class="operator" id="multiply">×</li>
+        <li class="operator" id="divide">÷</li>
+    </ul>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
