@@ -1,0 +1,113 @@
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+// HP Font and Colors
+// helpful http://www.hpcalc.org/
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans|Offside);
+// http://www.dafont.com/lcd-phone.font?fpp=20&text=1234567890
+$teal:#8ff8df;
+$purple:#9999ff;
+$displaybg:#7dcb80;
+$lcd:#0c4e5d;
+$bunit:3rem;
+
+@mixin buttonize {
+    width: $bunit*2.5;
+    height: $bunit;
+    text-align: center;
+    margin-right: 0.083*$bunit;
+    margin-top: 0.083*$bunit;
+}
+
+@mixin roundB {
+    border-bottom-left-radius: $bunit;
+    border-top-left-radius: $bunit;
+    border-bottom-right-radius: $bunit;
+    border-top-right-radius: $bunit;
+}   
+
+.buttongroup {
+    :first-child {
+        border-bottom-left-radius: $bunit;
+        border-top-left-radius: $bunit;
+    }
+/*    :last-child {
+        border-bottom-right-radius: $bunit;
+        border-top-right-radius: $bunit;
+    }
+*/
+}
+
+body {
+    background-color: #818181;
+    font-family: "Droid Sans", sans-serif;
+}
+
+.number {
+    color: white;
+    background-color: black;
+    @include buttonize;
+}
+/*
+li[data-val="0"] {
+    width: 2*2.5*$bunit+0.083*$bunit;
+}
+
+ul { 
+    margin-top: 0.083*$bunit;
+    margin-bottom: 0.083*$bunit;
+}
+
+.container {
+    background-color: black;
+    display: block;
+    padding: 1rem;
+    width: 5 * 2.5* $bunit;
+    margin: auto;
+}
+
+#displaypad {
+    display: block;
+    width: 2rem;
+    border: 1px;
+    border-color: black;
+}
+
+.display {
+    //background-color: $pur;
+    color: $ora-subtle;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-family: "Offside", sans-serif;
+}
+
+.fn {
+    background-color: $red-subtle;
+    &:hover {
+        background-color: $red-active;
+    }
+    @include buttonize;
+  //  @include roundB;
+}
+
+.operator {
+    background-color: $pur;
+    &:hover {
+        background-color: $lav-active;
+    }
+    @include buttonize;
+    font-size:1.3rem;
+}
+
+.fn, .number, .operator {
+    cursor: pointer;
+    list-style: none;
+    display: inline-block;
+    padding: 1rem;
+}
+*/

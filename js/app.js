@@ -85,16 +85,16 @@ $(document).ready(function () {
     // function for arithmetic with logic
     // to deal with case of empty active input
     function opPress(opCase) {
-        if (typeof stack[0] == 'undefined') {
+        strToNum();
+        if (typeof stack[0] == 'undefined' || isNaN(activeNum) ) {
             return;
         };
-        strToNum();
         if (!isNaN(activeNum)) {
             stack.unshift(activeNum);
         };
-        if (typeof stack[1] == 'undefined') {
-            return;
-        };
+//        if (typeof stack[1] == 'undefined') {
+//            return;
+//        };
         y = stack.shift();
         x = stack.shift();
         switch (opCase) {
