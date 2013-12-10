@@ -12,102 +12,98 @@
 // http://www.dafont.com/lcd-phone.font?fpp=20&text=1234567890
 $teal:#8ff8df;
 $purple:#9999ff;
-$displaybg:#7dcb80;
+$lcdbg:#7dcb80;
 $lcd:#0c4e5d;
-$bunit:3rem;
+$bunit:2rem;
 
 @mixin buttonize {
-    width: $bunit*2.5;
+    width: $bunit*1.5;
     height: $bunit;
     text-align: center;
-    margin-right: 0.083*$bunit;
-    margin-top: 0.083*$bunit;
+    margin-right: $bunit;
+    margin-top: $bunit;
+    padding-top: 0.3rem;
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    @include roundB;
+    box-shadow: 0 -0.2rem 0 -0.1rem #797979,
+                0   -0.25rem 0 0.1rem black;
 }
 
 @mixin roundB {
-    border-bottom-left-radius: $bunit;
-    border-top-left-radius: $bunit;
-    border-bottom-right-radius: $bunit;
-    border-top-right-radius: $bunit;
+    border-bottom-left-radius: $bunit/4;
+    border-top-left-radius: $bunit/4;
+    border-bottom-right-radius: $bunit/4;
+    border-top-right-radius: $bunit/4;
 }   
 
-.buttongroup {
-    :first-child {
-        border-bottom-left-radius: $bunit;
-        border-top-left-radius: $bunit;
-    }
-/*    :last-child {
-        border-bottom-right-radius: $bunit;
-        border-top-right-radius: $bunit;
-    }
-*/
-}
-
 body {
-    background-color: #818181;
+    background-color: #0f3448;
     font-family: "Droid Sans", sans-serif;
 }
 
-.number {
-    color: white;
-    background-color: black;
-    @include buttonize;
-}
-/*
-li[data-val="0"] {
-    width: 2*2.5*$bunit+0.083*$bunit;
-}
-
-ul { 
-    margin-top: 0.083*$bunit;
-    margin-bottom: 0.083*$bunit;
-}
-
 .container {
-    background-color: black;
+    background-color: #4883a2;
     display: block;
     padding: 1rem;
-    width: 5 * 2.5* $bunit;
+    width: 5 * 2.5 * $bunit;
     margin: auto;
 }
 
 #displaypad {
+    background-color: $lcdbg;
     display: block;
-    width: 2rem;
+    width: 90%;
+    margin:auto;
+    ul:first-child {
+        padding-top: 1rem;
+    }
+    ul:last-child {
+        padding-bottom: 1rem;
+    }
     border: 1px;
     border-color: black;
+    @include roundB;
+    box-shadow: 0 -0.5rem 0 -0.1rem #555555;
 }
 
 .display {
-    //background-color: $pur;
-    color: $ora-subtle;
-    padding: 1rem;
+    color: $lcd;
     font-size: 1.2rem;
     font-family: "Offside", sans-serif;
 }
 
+.number {
+    @include buttonize;
+}
+
 .fn {
-    background-color: $red-subtle;
-    &:hover {
-        background-color: $red-active;
-    }
     @include buttonize;
   //  @include roundB;
 }
 
 .operator {
-    background-color: $pur;
-    &:hover {
-        background-color: $lav-active;
-    }
     @include buttonize;
     font-size:1.3rem;
+    list-style: none;
 }
 
-.fn, .number, .operator {
-    cursor: pointer;
+.fn, .number {
     list-style: none;
     display: inline-block;
-    padding: 1rem;
 }
-*/
+
+.buttongroup {
+    display:block;
+    padding:0;
+    &:not(#operatorpad){
+        float:left;
+        clear:left;
+    }
+}
+
+#operatorpad {
+    float: right;
+    clear: both;
+}
