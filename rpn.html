@@ -19,6 +19,9 @@
         <li>
             <a href="#" rel="stylesheets/ipod.css">iPod</a>
         </li>
+        <li>
+            <a href="#" rel="stylesheets/typewriter.css">Typewriter</a>
+        </li>
     </ul>
     <div class="container">
 
@@ -31,34 +34,37 @@
                 <li class="display" id="lineA"></li>
             </ul>
         </div>
-        
+
         <div id="keyboard">
-            <ul class="buttongroup" id="fnpad">
-                <li class="fn" id="clear">C</li>
-                <li class="fn" id="bksp">←</li>
-                <li class="fn" id="enter">↵</li>
-            </ul>
+            <div class="kbgrp">
+                <ul class="buttongroup" id="fnpad">
+                    <li class="fn" id="clear">C</li>
+                    <li class="fn" id="bksp">←</li>
+                    <li class="fn" id="enter">↵</li>
+                </ul>
 
-            <ul class="buttongroup nums" id="numberpad">
-                <li class="number" data-val="9">9</li>
-                <li class="number" data-val="8">8</li>
-                <li class="number" data-val="7">7</li>
-                <li class="number" data-val="6">6</li>
-                <li class="number" data-val="5">5</li>
-                <li class="number" data-val="4">4</li>
-                <li class="number" data-val="3">3</li>
-                <li class="number" data-val="2">2</li>
-                <li class="number" data-val="1">1</li>
-                <li class="number" data-val="0">0</li>
-                <li class="number" data-val=".">.</li>
-            </ul>
-
-            <ul class="buttongroup" id="operatorpad">
-                <li class="operator" id="add">+</li>
-                <li class="operator" id="subtract">-</li>
-                <li class="operator" id="multiply">×</li>
-                <li class="operator" id="divide">÷</li>
-            </ul>
+                <ul class="buttongroup nums" id="numberpad">
+                    <li class="number" data-val="9">9</li>
+                    <li class="number" data-val="8">8</li>
+                    <li class="number" data-val="7">7</li>
+                    <li class="number" data-val="6">6</li>
+                    <li class="number" data-val="5">5</li>
+                    <li class="number" data-val="4">4</li>
+                    <li class="number" data-val="3">3</li>
+                    <li class="number" data-val="2">2</li>
+                    <li class="number" data-val="1">1</li>
+                    <li class="number" data-val="0">0</li>
+                    <li class="number" data-val=".">.</li>
+                </ul>
+            </div>
+            <div class="kbgrp" id="operators">
+                <ul class="buttongroup" id="operatorpad">
+                    <li class="operator" id="add">+</li>
+                    <li class="operator" id="subtract">-</li>
+                    <li class="operator" id="multiply">×</li>
+                    <li class="operator" id="divide">÷</li>
+                </ul>
+            </div>
         </div>
 
     </div>

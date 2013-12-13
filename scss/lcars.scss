@@ -84,6 +84,15 @@ ul {
     border-color: black;
 }
 
+.nums, #operatorpad {
+    li:not(:last-child) {
+        margin-right: 0.083*$bunit;
+    } 
+    li:last-child {
+        margin-right: 0.083*$bunit;
+    }
+}
+
 .display {
     //background-color: $pur;
     color: $ora-subtle;
