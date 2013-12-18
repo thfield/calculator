@@ -17,39 +17,28 @@ $ora-subtle:#ff9966;
 $ora-active:#ff9900;
 $yel:#ffcc66;
 $pur:#cc99cc;
-$bunit:3rem;
+
+$bunit: 3rem;
+$bwd: $bunit*2.5;
+$bht: $bunit;
+$bsp: 0.083*$bunit;
 
 @mixin buttonize {
-    width: $bunit*2.5;
-    height: $bunit;
+    width: $bwd;
+    height: $bht;
     text-align: right;
-    //margin-right: 0.083*$bunit;
-  //  margin-top: 0.083*$bunit;
     margin-top: 0;
 }
 
-@mixin roundB {
-    border-bottom-left-radius: $bunit;
-    border-top-left-radius: $bunit;
-    border-bottom-right-radius: $bunit;
-    border-top-right-radius: $bunit;
-}   
-
 .buttongroup {
     :first-child {
-        border-bottom-left-radius: $bunit;
-        border-top-left-radius: $bunit;
+        border-bottom-left-radius: $bht;
+        border-top-left-radius: $bht;
     }
-/*    :last-child {
-        border-bottom-right-radius: $bunit;
-        border-top-right-radius: $bunit;
-    }
-*/
 }
 
 body {
     background-color: #818181;
-    font-family: "Oswald", sans-serif;
 }
 
 .number {
@@ -61,43 +50,40 @@ body {
 }
 
 li[data-val="0"] {
-    width: 2*2.5*$bunit+0.083*$bunit;
+    width: 2*$bwd+$bsp;
 }
 
-ul { 
-    margin-top: 0.083*$bunit;
-    margin-bottom: 0.083*$bunit;
+//ul {
+.container  ul { 
+    margin-top: $bsp;
+    margin-bottom: $bsp;
 }
 
 .container {
+    font-family: "Oswald", sans-serif;
     background-color: black;
     display: block;
     padding: 1rem;
-    width: 5 * 2.5* $bunit;
+    width: 5 * $bwd;
     margin: auto;
 }
 
 #displaypad {
-    display: block;
-    width: 2rem;
-    border: 1px;
-    border-color: black;
+    width: 90%;
 }
 
-.nums, #operatorpad {
-    li:not(:last-child) {
-        margin-right: 0.083*$bunit;
-    } 
-    li:last-child {
-        margin-right: 0.083*$bunit;
+.nums, #operatorpad, #fnpad {
+    li {
+        margin-right: $bsp;
     }
 }
 
 .display {
-    //background-color: $pur;
     color: $ora-subtle;
     padding: 1rem;
     font-size: 1.2rem;
+    text-align: right;
+    padding-right: 2rem;
 }
 
 .fn {
@@ -106,7 +92,6 @@ ul {
         background-color: $red-active;
     }
     @include buttonize;
-  //  @include roundB;
 }
 
 .operator {

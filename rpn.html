@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Calculator</title>
-    <link rel="stylesheet" href="stylesheets/hp48g.css" />
+    <link rel="stylesheet" href="stylesheets/style.css" />
 
 </head>
 
@@ -36,13 +36,15 @@
         </div>
 
         <div id="keyboard">
-            <div class="kbgrp">
+            <div class="kbgrp" id="fns">
                 <ul class="buttongroup" id="fnpad">
                     <li class="fn" id="clear">C</li>
                     <li class="fn" id="bksp">←</li>
                     <li class="fn" id="enter">↵</li>
                 </ul>
-
+            </div>
+            
+            <div class="kbgrp" id="nums">
                 <ul class="buttongroup nums" id="numberpad">
                     <li class="number" data-val="9">9</li>
                     <li class="number" data-val="8">8</li>
@@ -57,6 +59,7 @@
                     <li class="number" data-val=".">.</li>
                 </ul>
             </div>
+            
             <div class="kbgrp" id="operators">
                 <ul class="buttongroup" id="operatorpad">
                     <li class="operator" id="add">+</li>

@@ -16,10 +16,12 @@ $lcdbg: #7dcb80;
 $lcd: #0c4e5d;
 $bunit: 2rem;
 $bwd: 1.5*$bunit;
+$bht: $bunit;
+$bsp: 2rem;
 
 @mixin buttonize {
     width: $bwd;
-    height: $bunit;
+    height: $bht;
     text-align: center;
     margin-top: $bunit;
     padding-top: 0.3rem;
@@ -39,12 +41,14 @@ $bwd: 1.5*$bunit;
 }   
 
 body {
-    background-color: #0f3448;
-    font-family: "Droid Sans", sans-serif;
+    background-color: grey;
+    
 }
 
 .container {
-    background-color: #4883a2;
+   // background-color: #4883a2;
+    font-family: "Droid Sans", sans-serif;
+    background-color: #0f3448;
     display: block;
     padding: 1rem;
     width: 5 * 2.5 * $bunit;
@@ -58,7 +62,7 @@ body {
 }
 
 #keyboard {
-    width: 4 * $bwd + 7rem;
+    width: 4 * $bwd + 3* $bsp;
     margin: auto;
     &:after { 
         content: " ";
@@ -89,12 +93,15 @@ body {
     color: $lcd;
     font-size: 1.2rem;
     font-family: "Offside", sans-serif;
+    text-align: right;
+    padding-right: 2rem;
 }
 
 .operator {
     @include buttonize;
     font-size: 1.3rem;
     list-style: none;
+    margin-left: $bsp;
 }
 
 .fn, .number {
@@ -111,17 +118,18 @@ ul.buttongroup {
 
 #fnpad, .nums {
     li:not(:last-child) {
-        margin-right: 2rem;
+        margin-right: $bsp;
     } 
-}
-
-#fnpad, .nums {
-    li:last-child {
-        margin-right: 1.6rem;
-    }
 }
 
 .kbgrp {
     display:block;
     float: left;
+}
+#enter {
+    width: 2*$bwd+$bsp;
+}
+
+li[data-val="0"] {
+    width: 2*$bwd+$bsp;
 }
