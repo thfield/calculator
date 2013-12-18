@@ -112,18 +112,18 @@ ul.buttongroup {
     -webkit-padding-start: 0;
 }
 
-#fnpad, .nums {
+#fnpad, .nums, #operators{
     li {
         margin-right: $bunit;
     } 
 }
-/*
-#fnpad, .nums {
+
+.nums {
     li:last-child {
-        margin-right: 1.6rem;
+        margin-right: 0;
     }
 }
-*/
+
 .kbgrp {
     display:block;
     float: left;
