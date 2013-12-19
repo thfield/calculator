@@ -32,16 +32,18 @@ $(document).ready(function () {
     };
     
     // http://stackoverflow.com/questions/7846980/how-do-i-switch-my-css-stylesheet-using-jquery
-    $("#csspick li a").click(function () {
+    $(".csspick").click(function () {
         reorder();
         rearrange();
         untype();
-        $("link").attr("href", $(this).attr('rel'));
+        $("link").attr("href", $(this).data('rel'));
+        $(this).siblings('.active').removeClass('active');
+        $(this).addClass('active');
         return false;
     });
     
-     $('a[rel="stylesheets/typewriter.css"]').click(function () {
-        typeOrder()
+     $('div[data-rel="stylesheets/typewriter.css"]').click(function () {
+        typeOrder();
         return false;
     });
     
