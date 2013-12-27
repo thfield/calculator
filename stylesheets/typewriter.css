@@ -1,0 +1,181 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Special+Elite);
+/* line 2, ../scss/style.scss */
+body {
+  background-color: white;
+}
+
+/* line 8, ../scss/style.scss */
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 14, ../scss/style.scss */
+.csspick, .word {
+  display: inline-block;
+  width: 6rem;
+  height: 2rem;
+  padding-top: 0.3rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  background-color: #bebebe;
+  border: 1px solid black;
+}
+/* line 24, ../scss/style.scss */
+.csspick:hover, .word:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* line 29, ../scss/style.scss */
+.active, .worded {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+
+/* line 31, ../scss/typewriter.scss */
+body {
+  background-color: grey;
+}
+
+/* line 35, ../scss/typewriter.scss */
+.container {
+  font-family: "Special Elite", monospace;
+  background-color: #65b7a4;
+  display: block;
+  padding: 1rem;
+  padding-bottom: 2rem;
+  width: 26rem;
+  margin: auto;
+}
+/* line 43, ../scss/typewriter.scss */
+.container:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+/* line 51, ../scss/typewriter.scss */
+#keyboard {
+  width: 18rem;
+  margin: auto;
+}
+/* line 54, ../scss/typewriter.scss */
+#keyboard:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+/* line 62, ../scss/typewriter.scss */
+#displaypad {
+  color: black;
+  background-color: white;
+  width: 90%;
+  margin: auto;
+  box-shadow: 2rem   0   0   -1rem    #000000, -2rem   0   0   -1rem    #000000;
+}
+/* line 67, ../scss/typewriter.scss */
+#displaypad ul:first-child {
+  padding-top: 1rem;
+}
+/* line 70, ../scss/typewriter.scss */
+#displaypad ul:last-child {
+  padding-bottom: 1rem;
+}
+
+/* line 77, ../scss/typewriter.scss */
+.display {
+  color: black;
+  font-size: 1.2rem;
+  text-align: right;
+  padding-right: 2rem;
+}
+
+/* line 84, ../scss/typewriter.scss */
+.number {
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  margin-top: 1rem;
+  padding-top: 0.7rem;
+  cursor: pointer;
+  color: black;
+  background-color: ivory;
+  border-bottom-left-radius: 1rem;
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  border-top-right-radius: 1rem;
+  box-shadow: 0 0 0 0.12rem #797979, 0 0 0 0.2rem ivory;
+  display: inline-block;
+}
+
+/* line 89, ../scss/typewriter.scss */
+.fn {
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  margin-top: 1rem;
+  padding-top: 0.7rem;
+  cursor: pointer;
+  color: black;
+  background-color: ivory;
+  border-bottom-left-radius: 1rem;
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  border-top-right-radius: 1rem;
+  box-shadow: 0 0 0 0.12rem #797979, 0 0 0 0.2rem ivory;
+}
+
+/* line 93, ../scss/typewriter.scss */
+.operator {
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  margin-top: 1rem;
+  padding-top: 0.7rem;
+  cursor: pointer;
+  color: black;
+  background-color: ivory;
+  border-bottom-left-radius: 1rem;
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  border-top-right-radius: 1rem;
+  box-shadow: 0 0 0 0.12rem #797979, 0 0 0 0.2rem ivory;
+  font-size: 1.3rem;
+  list-style: none;
+}
+
+/* line 99, ../scss/typewriter.scss */
+.fn, .number {
+  list-style: none;
+}
+
+/* line 103, ../scss/typewriter.scss */
+ul.buttongroup {
+  -webkit-margin-after: 0;
+  -webkit-margin-before: 0;
+  -webkit-padding-start: 0;
+}
+
+/* line 110, ../scss/typewriter.scss */
+#fnpad li, .nums li, #operators li {
+  margin-right: 2rem;
+}
+
+/* line 116, ../scss/typewriter.scss */
+.nums li:last-child {
+  margin-right: 0;
+}
+
+/* line 121, ../scss/typewriter.scss */
+.kbgrp {
+  display: block;
+  float: left;
+}
