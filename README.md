@@ -1,29 +1,16 @@
-# Foundation Compass Template
+# Calculator
 
-The easiest way to get started with Foundation + Compass.
+This is a simple [RPN](http://en.wikipedia.org/wiki/Reverse_Polish_notation) calculator.  I wrote the calculator JS from memory, so it is probably not as efficient as it could be.
 
-## Requirements
+## Style Chooser
 
-  * Ruby 1.9+
-  * [Node.js](http://nodejs.org)
-  * [compass](http://compass-style.org/): `gem install compass`
-  * [bower](http://bower.io): `npm install bower -g`
+Choose a style to apply a different CSS sheet and change the look of the calculator:
 
-## Quickstart
+ *Star Trek: The computer system from ST:TNG
+ *HP 48G: The graphing calculator of choice that isn't a TI82
+ *iPod: my MP3 player's calculator
+ *Typewriter: looks sort of like a typewriter
 
-  * [Download this starter compass project and unzip it](https://github.com/zurb/foundation-compass-template/archive/master.zip)
-  * Run `bower install` to install the latest version of Foundation
-  
-Then when you're working on your project, just run the following command:
+## Wordifier
 
-```bash
-compass watch
-```
-
-## Upgrading
-
-If you'd like to upgrade to a newer version of Foundation down the road just run:
-
-```bash
-bower update
-```
+turn on this option to change numbers and symbols to words.
